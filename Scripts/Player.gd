@@ -53,17 +53,18 @@ func get_input():
 		if(is_on_floor()):
 			change_state(RUN)
 		velocity.x += run_speed
+		$Player.flip_h = velocity.x < 0
 	if left:
 		if(is_on_floor()):
 			change_state(RUN)
 		velocity.x -= run_speed
+		$Player.flip_h = velocity.x < 0
 	if attack:
 		if(is_on_floor()):
 			change_state(ATTACK)
 			set_process(false)
 			velocity.x = 0
 
-	$Player.flip_h = velocity.x < 0
 	if !right and !left and state == RUN:
 		change_state(IDLE)
 
