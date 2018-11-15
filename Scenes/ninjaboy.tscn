@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Assets/characters/ninjaboy/idle/Idle__009-0.png" type="Texture" id=1]
 [ext_resource path="res://Assets/characters/ninjaboy/idle/Idle__009-1.png" type="Texture" id=2]
@@ -19,36 +19,76 @@
 [ext_resource path="res://Assets/characters/ninjaboy/idle/Idle__009-16.png" type="Texture" id=17]
 [ext_resource path="res://Assets/characters/ninjaboy/idle/Idle__009-17.png" type="Texture" id=18]
 [ext_resource path="res://Assets/characters/ninjaboy/idle/Idle__009-18.png" type="Texture" id=19]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__005.png" type="Texture" id=20]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__006.png" type="Texture" id=21]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__007.png" type="Texture" id=22]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__008.png" type="Texture" id=23]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__009.png" type="Texture" id=24]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-0.png" type="Texture" id=25]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-1.png" type="Texture" id=26]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-2.png" type="Texture" id=27]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-3.png" type="Texture" id=28]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-4.png" type="Texture" id=29]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-5.png" type="Texture" id=30]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-6.png" type="Texture" id=31]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-7.png" type="Texture" id=32]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-8.png" type="Texture" id=33]
-[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-9.png" type="Texture" id=34]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__000.png" type="Texture" id=35]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__001.png" type="Texture" id=36]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__002.png" type="Texture" id=37]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__003.png" type="Texture" id=38]
-[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__004.png" type="Texture" id=39]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-0.png" type="Texture" id=40]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-1.png" type="Texture" id=41]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-2.png" type="Texture" id=42]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-3.png" type="Texture" id=43]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-4.png" type="Texture" id=44]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-5.png" type="Texture" id=45]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-6.png" type="Texture" id=46]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-7.png" type="Texture" id=47]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-8.png" type="Texture" id=48]
-[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-9.png" type="Texture" id=49]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-0.png" type="Texture" id=20]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-1.png" type="Texture" id=21]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-2.png" type="Texture" id=22]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-3.png" type="Texture" id=23]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-4.png" type="Texture" id=24]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-5.png" type="Texture" id=25]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-6.png" type="Texture" id=26]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-7.png" type="Texture" id=27]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-8.png" type="Texture" id=28]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_attack/jump_attack-9.png" type="Texture" id=29]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__005.png" type="Texture" id=30]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__006.png" type="Texture" id=31]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__007.png" type="Texture" id=32]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__008.png" type="Texture" id=33]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__009.png" type="Texture" id=34]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-0.png" type="Texture" id=35]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-1.png" type="Texture" id=36]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-2.png" type="Texture" id=37]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-3.png" type="Texture" id=38]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-4.png" type="Texture" id=39]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-5.png" type="Texture" id=40]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-6.png" type="Texture" id=41]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-7.png" type="Texture" id=42]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-8.png" type="Texture" id=43]
+[ext_resource path="res://Assets/characters/ninjaboy/run/Run__009-9.png" type="Texture" id=44]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__000.png" type="Texture" id=45]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__001.png" type="Texture" id=46]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__002.png" type="Texture" id=47]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__003.png" type="Texture" id=48]
+[ext_resource path="res://Assets/characters/ninjaboy/jump/Jump__004.png" type="Texture" id=49]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-0.png" type="Texture" id=50]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-1.png" type="Texture" id=51]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-2.png" type="Texture" id=52]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-3.png" type="Texture" id=53]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-4.png" type="Texture" id=54]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-5.png" type="Texture" id=55]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-6.png" type="Texture" id=56]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-7.png" type="Texture" id=57]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-8.png" type="Texture" id=58]
+[ext_resource path="res://Assets/characters/ninjaboy/attack/attack-9.png" type="Texture" id=59]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-0.png" type="Texture" id=60]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-1.png" type="Texture" id=61]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-2.png" type="Texture" id=62]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-3.png" type="Texture" id=63]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-4.png" type="Texture" id=64]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-5.png" type="Texture" id=65]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-6.png" type="Texture" id=66]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-7.png" type="Texture" id=67]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-8.png" type="Texture" id=68]
+[ext_resource path="res://Assets/characters/ninjaboy/throw/throw-9.png" type="Texture" id=69]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-0.png" type="Texture" id=70]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-1.png" type="Texture" id=71]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-2.png" type="Texture" id=72]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-3.png" type="Texture" id=73]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-4.png" type="Texture" id=74]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-5.png" type="Texture" id=75]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-6.png" type="Texture" id=76]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-7.png" type="Texture" id=77]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-8.png" type="Texture" id=78]
+[ext_resource path="res://Assets/characters/ninjaboy/jump_throw/jump_throw-9.png" type="Texture" id=79]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-0.png" type="Texture" id=80]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-1.png" type="Texture" id=81]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-2.png" type="Texture" id=82]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-3.png" type="Texture" id=83]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-4.png" type="Texture" id=84]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-5.png" type="Texture" id=85]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-6.png" type="Texture" id=86]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-7.png" type="Texture" id=87]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-8.png" type="Texture" id=88]
+[ext_resource path="res://Assets/characters/ninjaboy/dead/dead-9.png" type="Texture" id=89]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -58,28 +98,48 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "jump_attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "fall_down",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
 "loop": true,
 "name": "run",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "jump_up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ) ],
 "loop": true,
 "name": "attack",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "jump_throw",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 
 resource_name = "attack"
 length = 0.9
@@ -109,10 +169,76 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Area/CollisionShape:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 58.2827 ), Vector3( 0, 0, -1.59003 ), Vector3( 0, 0, -28.3603 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Area/CollisionShape:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.546373, 0.569789, 0 ), Vector3( 0.929852, -0.0735997, 0 ), Vector3( 0.525129, -0.975663, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Area/CollisionShape:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, true ]
+}
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=11]
 
-resource_name = "fall_down"
+resource_name = "dead"
+length = 0.9
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "dead", "dead" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=3]
+
 length = 0.4
 loop = false
 step = 0.1
@@ -141,9 +267,8 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "idle"
 length = 0.9
 loop = true
 step = 0.1
@@ -172,9 +297,70 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
-resource_name = "jump_up"
+resource_name = "jump_attack"
+length = 0.9
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "jump_attack", "jump_attack" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "jump_throw"
+length = 0.9
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "jump_throw", "jump_throw" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9 ]
+}
+
+[sub_resource type="Animation" id=7]
+
 length = 0.4
 loop = false
 step = 0.1
@@ -203,7 +389,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 
 length = 0.9
 loop = true
@@ -233,6 +419,40 @@ tracks/1/keys = {
 "values": [ "run", "run" ]
 }
 
+[sub_resource type="Animation" id=9]
+
+length = 0.9
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "throw", "throw" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="BoxShape" id=10]
+
+extents = Vector3( 0.8, 0.1, 0.1 )
+
 [node name="Player" type="AnimatedSprite3D"]
 
 layers = 1
@@ -257,8 +477,8 @@ shaded = false
 double_sided = true
 alpha_cut = 0
 frames = SubResource( 1 )
-animation = "attack"
-frame = 9
+animation = "dead"
+frame = 4
 _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
@@ -268,11 +488,46 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/attack = SubResource( 6 )
-anims/fall_down = SubResource( 2 )
-anims/idle = SubResource( 3 )
-anims/jump_up = SubResource( 4 )
-anims/run = SubResource( 5 )
+anims/attack = SubResource( 2 )
+anims/dead = SubResource( 11 )
+anims/fall_down = SubResource( 3 )
+anims/idle = SubResource( 4 )
+anims/jump_attack = SubResource( 5 )
+anims/jump_throw = SubResource( 6 )
+anims/jump_up = SubResource( 7 )
+anims/run = SubResource( 8 )
+anims/throw = SubResource( 9 )
 blend_times = [  ]
+
+[node name="Area" type="Area" parent="." index="1"]
+
+input_ray_pickable = false
+input_capture_on_drag = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision_layer = 1
+collision_mask = 1
+audio_bus_override = false
+audio_bus_name = "Master"
+reverb_bus_enable = false
+reverb_bus_name = "Master"
+reverb_bus_amount = 0.0
+reverb_bus_uniformity = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
+
+transform = Transform( 0.525728, -0.850652, 0, 0.850652, 0.525728, 0, 0, 0, 1, 0.546373, 0.569789, 0 )
+shape = SubResource( 10 )
+disabled = true
+_sections_unfolded = [ "Transform" ]
 
 
