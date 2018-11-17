@@ -71,7 +71,6 @@ func get_input():
 	var throw = Input.is_action_just_pressed('throw')
 
 	if jump:
-		print(jump_time)
 		if is_on_floor():
 			change_state(JUMP_UP)
 			velocity.y = jump_speed
