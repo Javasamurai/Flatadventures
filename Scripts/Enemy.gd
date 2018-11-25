@@ -20,12 +20,12 @@ var health = 100
 
 func _ready():
 	change_state(WALK)
-	front_pos = get_transform().origin.x + calc_dist_to(get_node(front_pos_path).get_transform().origin.x)
-	back_pos = get_transform().origin.x - calc_dist_to(get_node(back_pos_path).get_transform().origin.x)
+	front_pos = get_transform().origin.x + calc_dist_to(get_node(front_pos_path).get_global_transform().origin.x)
+	back_pos = get_transform().origin.x + calc_dist_to(get_node(back_pos_path).get_global_transform().origin.x)
 	anim_player.connect('animation_finished', self, 'animation_completed')
 
 func calc_dist_to(x):
-	return sqrt(pow(x, 2) + pow(get_transform().origin.x, 2))
+	return x - get_transform().origin.x
 
 func animation_completed(anim):
 	if anim == 'attack':

@@ -1,78 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/GameScene.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/Dino.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/sky/sky.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Levels/Level1.tscn" type="PackedScene" id=5]
 
 [sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 0.7, 1, 0.1 )
-
-[sub_resource type="SpatialMaterial" id=2]
-
-render_priority = 0
-flags_transparent = false
-flags_unshaded = false
-flags_vertex_lighting = false
-flags_no_depth_test = false
-flags_use_point_size = false
-flags_world_triplanar = false
-flags_fixed_size = false
-flags_albedo_tex_force_srgb = false
-vertex_color_use_as_albedo = false
-vertex_color_is_srgb = false
-params_diffuse_mode = 0
-params_specular_mode = 0
-params_blend_mode = 0
-params_cull_mode = 0
-params_depth_draw_mode = 0
-params_line_width = 1.0
-params_point_size = 1.0
-params_billboard_mode = 0
-params_grow = false
-params_use_alpha_scissor = false
-albedo_color = Color( 0.0359039, 0.707031, 0.172227, 1 )
-metallic = 0.0
-metallic_specular = 0.5
-metallic_texture_channel = 0
-roughness = 1.0
-roughness_texture_channel = 0
-emission_enabled = false
-normal_enabled = false
-rim_enabled = false
-clearcoat_enabled = false
-anisotropy_enabled = false
-ao_enabled = false
-depth_enabled = false
-subsurf_scatter_enabled = false
-transmission_enabled = false
-refraction_enabled = false
-detail_enabled = false
-uv1_scale = Vector3( 1, 1, 1 )
-uv1_offset = Vector3( 0, 0, 0 )
-uv1_triplanar = false
-uv1_triplanar_sharpness = 1.0
-uv2_scale = Vector3( 1, 1, 1 )
-uv2_offset = Vector3( 0, 0, 0 )
-uv2_triplanar = false
-uv2_triplanar_sharpness = 1.0
-proximity_fade_enable = false
-distance_fade_enable = false
-_sections_unfolded = [ "Albedo" ]
-
-[sub_resource type="CubeMesh" id=3]
-
-material = SubResource( 2 )
-custom_aabb = AABB( 0, 0, 0, 0, 0, 0 )
-size = Vector3( 100, 1, 10 )
-subdivide_width = 0
-subdivide_height = 0
-subdivide_depth = 0
-
-[sub_resource type="ConvexPolygonShape" id=4]
-
-points = PoolVector3Array( -50, 0.5, 5, 50, 0.5, -5, 50, 0.5, 5, -50, 0.5, -5, -50, -0.5, 5, 50, -0.5, -5, 50, -0.5, 5, -50, -0.5, -5, 50, 0.5, 5, -50, 0.5, -5, 50, 0.5, -5, -50, 0.5, 5, 50, -0.5, 5, -50, -0.5, -5, 50, -0.5, -5, -50, -0.5, 5, 50, 0.5, 5, -50, -0.5, 5, -50, 0.5, 5, 50, -0.5, 5, 50, 0.5, -5, -50, -0.5, -5, -50, 0.5, -5, 50, -0.5, -5 )
 
 [node name="GameScene" type="Spatial" index="0"]
 
@@ -109,7 +45,7 @@ directional_shadow_max_distance = 200.0
 
 [node name="player_body" type="KinematicBody" parent="." index="2"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.555, 26, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.555, 26.1705, 2 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -122,8 +58,9 @@ axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 run_speed = 15
-jump_speed = 10
+jump_speed = 15
 gravity = -20
 
 [node name="CollisionShape" type="CollisionShape" parent="player_body" index="0"]
@@ -133,9 +70,41 @@ shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
+[node name="bg" type="Sprite3D" parent="player_body" index="1"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -10.1876 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 4 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
 [node name="Camera" type="Camera" parent="." index="3"]
 
-transform = Transform( 1, 0, 0, 0, 0.978148, 0.207912, 0, -0.207912, 0.978148, -13.141, 0.955591, 10 )
+transform = Transform( 1, -5.43147e-05, 0.000254184, -1.01009e-05, 0.969353, 0.245674, -0.000260366, -0.245674, 0.969353, 8.189, 1.85904, 12.0997 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null
@@ -150,54 +119,6 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="." index="4"]
-
-editor/display_folded = true
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.8597, 0, 0 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = SubResource( 3 )
-skeleton = NodePath("..")
-material/0 = null
-
-[node name="StaticBody" type="StaticBody" parent="MeshInstance" index="0"]
-
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
-friction = 1.0
-bounce = 0.0
-constant_linear_velocity = Vector3( 0, 0, 0 )
-constant_angular_velocity = Vector3( 0, 0, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody" index="0"]
-
-shape = SubResource( 4 )
-disabled = false
-
-[node name="Dino" parent="." index="5" instance=ExtResource( 4 )]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3638, 5.75991, 0 )
-_sections_unfolded = [ "Transform" ]
-run_speed = 7
-attack_hurt = 25
-front_pos_path = NodePath("Position3D")
-back_pos_path = NodePath("Position3D2")
-
-[node name="Position3D" type="Position3D" parent="Dino" index="2"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3843, 0, 0 )
-
-[node name="Position3D2" type="Position3D" parent="Dino" index="3"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35919, 0, 0 )
+[node name="Level1" parent="." index="4" instance=ExtResource( 5 )]
 
 

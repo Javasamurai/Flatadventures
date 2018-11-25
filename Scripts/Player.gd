@@ -8,7 +8,7 @@ const boy = preload("res://Scenes/ninjaboy.tscn")
 const girl = preload("res://Scenes/ninjagirl.tscn")
 const knife = preload("res://Scenes/Knife.tscn")
 
-enum {IDLE, RUN, JUMP_UP, FALL_DOWN, ATTACK, THROW, JUMP_ATTACK, JUMP_THROW, DEAD}
+enum {IDLE, RUN, JUMP_UP, FALL_DOWN, ATTACK, THROW, JUMP_ATTACK, JUMP_THROW, DEAD, FINISH}
 var velocity = Vector3(0, 0, 0)
 var state
 var player
@@ -60,6 +60,8 @@ func change_state(new_state):
 			new_anim = 'dead'
 
 func get_input():
+	if(state == FINISH):
+		return
 	velocity.x = 0
 	var right = Input.is_action_pressed('move_right')
 	var left = Input.is_action_pressed('move_left')
@@ -155,3 +157,7 @@ func attack_enemy():
 		velocity.x = 0
 	else:
 		change_state(JUMP_ATTACK)
+
+func stop_movement():
+	change_state(FINISH)
+	set_physics_process(false)

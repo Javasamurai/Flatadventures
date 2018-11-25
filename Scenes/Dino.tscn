@@ -1,44 +1,44 @@
 [gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Assets/characters/dino/dead/dead-0.png" type="Texture" id=2]
-[ext_resource path="res://Assets/characters/dino/dead/dead-1.png" type="Texture" id=3]
-[ext_resource path="res://Assets/characters/dino/dead/dead-2.png" type="Texture" id=4]
-[ext_resource path="res://Assets/characters/dino/dead/dead-3.png" type="Texture" id=5]
-[ext_resource path="res://Assets/characters/dino/dead/dead-4.png" type="Texture" id=6]
-[ext_resource path="res://Assets/characters/dino/dead/dead-5.png" type="Texture" id=7]
-[ext_resource path="res://Assets/characters/dino/dead/dead-6.png" type="Texture" id=8]
-[ext_resource path="res://Assets/characters/dino/dead/dead-7.png" type="Texture" id=9]
-[ext_resource path="res://Assets/characters/dino/run/run-0.png" type="Texture" id=10]
-[ext_resource path="res://Assets/characters/dino/run/run-1.png" type="Texture" id=11]
-[ext_resource path="res://Assets/characters/dino/run/run-2.png" type="Texture" id=12]
-[ext_resource path="res://Assets/characters/dino/run/run-3.png" type="Texture" id=13]
-[ext_resource path="res://Assets/characters/dino/run/run-4.png" type="Texture" id=14]
-[ext_resource path="res://Assets/characters/dino/run/run-5.png" type="Texture" id=15]
-[ext_resource path="res://Assets/characters/dino/run/run-6.png" type="Texture" id=16]
-[ext_resource path="res://Assets/characters/dino/run/run-7.png" type="Texture" id=17]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-0.png" type="Texture" id=18]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-1.png" type="Texture" id=19]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-2.png" type="Texture" id=20]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-3.png" type="Texture" id=21]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-4.png" type="Texture" id=22]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-5.png" type="Texture" id=23]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-6.png" type="Texture" id=24]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-7.png" type="Texture" id=25]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-8.png" type="Texture" id=26]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-9.png" type="Texture" id=27]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-10.png" type="Texture" id=28]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-11.png" type="Texture" id=29]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-12.png" type="Texture" id=30]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-13.png" type="Texture" id=31]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-14.png" type="Texture" id=32]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-15.png" type="Texture" id=33]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-16.png" type="Texture" id=34]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-17.png" type="Texture" id=35]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-18.png" type="Texture" id=36]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-19.png" type="Texture" id=37]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-20.png" type="Texture" id=38]
-[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-21.png" type="Texture" id=39]
+[ext_resource path="res://Assets/characters/dino/run/run-0.png" type="Texture" id=2]
+[ext_resource path="res://Assets/characters/dino/run/run-1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/characters/dino/run/run-2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/characters/dino/run/run-3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/characters/dino/run/run-4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/characters/dino/run/run-5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/characters/dino/run/run-6.png" type="Texture" id=8]
+[ext_resource path="res://Assets/characters/dino/run/run-7.png" type="Texture" id=9]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-0.png" type="Texture" id=10]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-3.png" type="Texture" id=13]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-4.png" type="Texture" id=14]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-5.png" type="Texture" id=15]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-6.png" type="Texture" id=16]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-7.png" type="Texture" id=17]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-8.png" type="Texture" id=18]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-9.png" type="Texture" id=19]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-10.png" type="Texture" id=20]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-11.png" type="Texture" id=21]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-12.png" type="Texture" id=22]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-13.png" type="Texture" id=23]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-14.png" type="Texture" id=24]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-15.png" type="Texture" id=25]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-16.png" type="Texture" id=26]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-17.png" type="Texture" id=27]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-18.png" type="Texture" id=28]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-19.png" type="Texture" id=29]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-20.png" type="Texture" id=30]
+[ext_resource path="res://Assets/characters/dino/stop_and_attack/stop_attack-21.png" type="Texture" id=31]
+[ext_resource path="res://Assets/characters/dino/dead/dead-0.png" type="Texture" id=32]
+[ext_resource path="res://Assets/characters/dino/dead/dead-1.png" type="Texture" id=33]
+[ext_resource path="res://Assets/characters/dino/dead/dead-2.png" type="Texture" id=34]
+[ext_resource path="res://Assets/characters/dino/dead/dead-3.png" type="Texture" id=35]
+[ext_resource path="res://Assets/characters/dino/dead/dead-4.png" type="Texture" id=36]
+[ext_resource path="res://Assets/characters/dino/dead/dead-5.png" type="Texture" id=37]
+[ext_resource path="res://Assets/characters/dino/dead/dead-6.png" type="Texture" id=38]
+[ext_resource path="res://Assets/characters/dino/dead/dead-7.png" type="Texture" id=39]
 [ext_resource path="res://Assets/characters/dino/walk/walk-0.png" type="Texture" id=40]
 [ext_resource path="res://Assets/characters/dino/walk/walk-1.png" type="Texture" id=41]
 [ext_resource path="res://Assets/characters/dino/walk/walk-2.png" type="Texture" id=42]
@@ -60,17 +60,17 @@ extents = Vector3( 0.5, 1, 0.1 )
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "dead",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": true,
 "name": "run",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "dead",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ) ],
@@ -266,7 +266,5 @@ anims/dead = SubResource( 4 )
 anims/run = SubResource( 5 )
 anims/walk = SubResource( 6 )
 blend_times = [  ]
-
-[connection signal="input_event" from="." to="." method="_on_Dino_input_event"]
 
 

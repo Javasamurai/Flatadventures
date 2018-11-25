@@ -1,4 +1,4 @@
 extends Node
 
-var SELECTED_PLAYER = 1
+var SELECTED_PLAYER = 0
 enum {NINJA_BOY, NINJA_GIRL}

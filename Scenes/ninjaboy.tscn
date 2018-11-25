@@ -475,7 +475,7 @@ shaded = false
 double_sided = true
 alpha_cut = 0
 frames = SubResource( 1 )
-animation = "idle"
+animation = "attack"
 _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
