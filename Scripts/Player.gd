@@ -8,13 +8,14 @@ const boy = preload("res://Scenes/ninjaboy.tscn")
 const girl = preload("res://Scenes/ninjagirl.tscn")
 const knife = preload("res://Scenes/Knife.tscn")
 
-enum {IDLE, RUN, JUMP_UP, FALL_DOWN, ATTACK, THROW, JUMP_ATTACK, JUMP_THROW, DEAD, FINISH}
+enum {IDLE, RUN, JUMP_UP, DOUBLE_JUMP, FALL_DOWN, ATTACK, THROW, JUMP_ATTACK, JUMP_THROW, DEAD, FINISH}
 var velocity = Vector3(0, 0, 0)
 var state
 var player
 var anim
 var new_anim
 var anim_player
+var jump_time = 0
 
 var health = 100
 onready var health_bar = get_parent().get_node('HUD/HBoxContainer/TextureProgress')
@@ -52,6 +53,8 @@ func change_state(new_state):
 			new_anim = 'attack'
 		THROW:
 			new_anim = 'throw'
+		DOUBLE_JUMP:
+			new_anim = 'double_jump'
 		JUMP_ATTACK:
 			new_anim = 'jump_attack'
 		JUMP_THROW:
@@ -69,9 +72,16 @@ func get_input():
 	var attack = Input.is_action_just_pressed('attack')
 	var throw = Input.is_action_just_pressed('throw')
 
-	if jump and is_on_floor():
-		change_state(JUMP_UP)
-		velocity.y = jump_speed
+	if jump:
+		if is_on_floor():
+			change_state(JUMP_UP)
+			velocity.y = jump_speed
+			jump_time = jump_time + 1
+		elif jump_time == 1:
+			jump_time = 0
+			change_state(JUMP_UP)
+			velocity.y = jump_speed
+
 	if right:
 		if is_on_floor():
 			change_state(RUN)
