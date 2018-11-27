@@ -32,6 +32,7 @@ func animation_completed(anim):
 		attack_player()
 		change_state(WALK)
 	elif(anim == "dead"):
+		queue_free()
 		set_process(false)
 		set_physics_process(false)
 
