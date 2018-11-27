@@ -36,7 +36,7 @@ func _ready():
 	sword_area.connect("body_entered", self, "on_sword_attack")
 
 func on_sword_attack(body):
-	if(body.name == "Dino"):
+	if(body.is_in_group(GlobalConstants.ENEMIES)):
 		body.get_hurt(50)
 
 func change_state(new_state):
@@ -173,3 +173,6 @@ func attack_enemy():
 func stop_movement():
 	change_state(FINISH)
 	set_physics_process(false)
+	if(GlobalConstants.CURR_LEVEL != 3):
+		GlobalConstants.CURR_LEVEL += 1
+		get_tree().reload_current_scene()
