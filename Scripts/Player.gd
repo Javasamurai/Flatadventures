@@ -142,12 +142,6 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	if get_slide_count() > 0:
-		var kin_coll = get_slide_collision(get_slide_count() - 1)
-		if kin_coll.get_collider().name == 'GroundBody':
-			GlobalConstants.lives = GlobalConstants.lives - 1
-			get_tree().change_scene("res://Scenes/lives.tscn")
-
 	if(state == DEAD):
 		return
 	velocity.y += gravity * delta
