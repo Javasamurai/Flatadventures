@@ -71,13 +71,14 @@ func _physics_process(delta):
 			turn_left()
 	velocity.y += gravity
 	velocity = move_and_slide(velocity)
-	var kin_coll = get_slide_collision(get_slide_count() - 1)
-	if(kin_coll and kin_coll.get_collider().name == 'player_body'):
-		player = kin_coll.get_collider()
-		if(player.state != player.DEAD):
-			change_state(ATTACK)
-	else:
-		change_state(WALK)
+	if get_slide_count() > 0:
+		var kin_coll = get_slide_collision(get_slide_count() - 1)
+		if(kin_coll and kin_coll.get_collider().name == 'player_body'):
+			player = kin_coll.get_collider()
+			if(player.state != player.DEAD):
+				change_state(ATTACK)
+		else:
+			change_state(WALK)
 
 func turn_left():
 	velocity.x = -run_speed
