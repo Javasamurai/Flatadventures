@@ -1,21 +1,30 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/pngs/bg.png" type="Texture" id=2]
-[ext_resource path="res://Assets/pngs/blue.png" type="Texture" id=3]
-[ext_resource path="res://Assets/pngs/red.png" type="Texture" id=4]
-[ext_resource path="res://Assets/pngs/green.png" type="Texture" id=5]
-[ext_resource path="res://Assets/fonts/Friendly Schoolmates (Regular) Font by Situjuh (7NTypes).otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/fonts/riffic-bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/pngs/blue.png" type="Texture" id=4]
+[ext_resource path="res://Assets/pngs/red.png" type="Texture" id=5]
+[ext_resource path="res://Assets/pngs/green.png" type="Texture" id=6]
+[ext_resource path="res://Assets/fonts/Friendly Schoolmates (Regular) Font by Situjuh (7NTypes).otf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 60
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Font/fallback", "Resource", "Settings" ]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 56
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -25,16 +34,45 @@ texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Offset" ]
 
-[node name="VSplitContainer" type="VSplitContainer" parent="." index="1"]
+[node name="title" type="Label" parent="." index="1"]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 168.0
+margin_top = 45.0
+margin_right = 809.0
+margin_bottom = 136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.524017, 0.667729, 0.871094, 1 )
+custom_colors/font_color_shadow = Color( 0.292969, 0.0480652, 0.0480652, 1 )
+custom_constants/shadow_offset_x = 8
+custom_constants/shadow_offset_y = 8
+text = "Flat Adventures"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="VSplitContainer" type="VSplitContainer" parent="." index="2"]
+
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 401.0
-margin_top = 191.0
-margin_right = 559.0
-margin_bottom = 345.0
+margin_left = 376.0
+margin_top = 157.0
+margin_right = 534.0
+margin_bottom = 448.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -69,9 +107,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Label" type="Label" parent="VSplitContainer/PlayGame" index="0"]
@@ -100,14 +138,13 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Exit" type="TextureButton" parent="VSplitContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 83.0
 margin_right = 158.0
-margin_bottom = 154.0
+margin_bottom = 291.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -119,9 +156,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Label" type="Label" parent="VSplitContainer/Exit" index="0"]
