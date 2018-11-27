@@ -14,7 +14,6 @@ func _ready():
 
 func _process(delta):
 	seconds_passed = seconds_passed + delta
-	print(seconds_passed)
 	if seconds_passed > 1.5:
 		get_tree().change_scene("res://Scenes/GameScene.tscn")
 func load_game():
