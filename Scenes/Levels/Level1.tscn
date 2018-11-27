@@ -198,6 +198,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="NPC" type="Spatial" parent="." index="2"]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.21932, 2 )
 _sections_unfolded = [ "Transform" ]
 

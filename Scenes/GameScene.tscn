@@ -11,7 +11,7 @@
 
 extents = Vector3( 0.7, 1, 0.1 )
 
-[node name="GameScene" type="Spatial" index="0"]
+[node name="GameScene" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -95,7 +95,7 @@ transparent = true
 shaded = false
 double_sided = true
 alpha_cut = 0
-texture = ExtResource( 4 )
+texture = null
 vframes = 1
 hframes = 1
 frame = 0
@@ -120,7 +120,9 @@ near = 0.05
 far = 100.0
 _sections_unfolded = [ "Transform" ]
 
-[node name="Level1" parent="." index="4" instance=ExtResource( 5 )]
+[node name="CurrentLevel" type="Spatial" parent="." index="4"]
+
+[node name="Level1" parent="CurrentLevel" index="0" instance=ExtResource( 4 )]
 
 [node name="Spatial" parent="." index="5" instance=ExtResource( 6 )]
 

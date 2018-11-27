@@ -11,7 +11,7 @@ var velocity = Vector3(0, 0, 0)
 var state
 var anim
 var new_anim
-onready var anim_player = $dino_sprite/AnimationPlayer
+onready var anim_player = $enemy_sprite/AnimationPlayer
 
 var front_pos
 var back_pos
@@ -19,6 +19,7 @@ var player
 var health = 100
 
 func _ready():
+	add_to_group(GlobalConstants.ENEMIES)
 	change_state(WALK)
 	front_pos = get_transform().origin.x + calc_dist_to(get_node(front_pos_path).get_global_transform().origin.x)
 	back_pos = get_transform().origin.x + calc_dist_to(get_node(back_pos_path).get_global_transform().origin.x)
@@ -60,7 +61,7 @@ func _process(delta):
 func _physics_process(delta):
 	if(state == DEAD):
 		return
-	if($dino_sprite.flip_h):
+	if($enemy_sprite.flip_h):
 		if(get_transform().origin.x > back_pos):
 			turn_left()
 		else:
@@ -83,13 +84,13 @@ func _physics_process(delta):
 
 func turn_left():
 	velocity.x = -run_speed
-	$dino_sprite.flip_h = true
-	$dino_sprite.set_offset(Vector2(-50, 0))
+	$enemy_sprite.flip_h = true
+	$enemy_sprite.set_offset(Vector2(-50, 0))
 
 func turn_right():
 	velocity.x = run_speed
-	$dino_sprite.flip_h = false
-	$dino_sprite.set_offset(Vector2(50, 0))
+	$enemy_sprite.flip_h = false
+	$enemy_sprite.set_offset(Vector2(50, 0))
 
 func attack_player():
 	player.get_hurt(attack_hurt)
