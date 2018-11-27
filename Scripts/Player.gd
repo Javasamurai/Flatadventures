@@ -9,6 +9,7 @@ const girl = preload("res://Scenes/ninjagirl.tscn")
 const knife = preload("res://Scenes/Knife.tscn")
 
 enum {IDLE, RUN, JUMP_UP, DOUBLE_JUMP, FALL_DOWN, ATTACK, THROW, JUMP_ATTACK, JUMP_THROW, DEAD, FINISH}
+
 var velocity = Vector3(0, 0, 0)
 var state
 var player
@@ -132,6 +133,7 @@ func throw_knife():
 
 func _process(delta):
 	get_input()
+	
 	if(anim_player == null):
 		return
 	if new_anim != anim:
@@ -140,6 +142,12 @@ func _process(delta):
 
 
 func _physics_process(delta):
+	if get_slide_count() > 0:
+		var kin_coll = get_slide_collision(get_slide_count() - 1)
+		if kin_coll.get_collider().name == 'GroundBody':
+			GlobalConstants.lives = GlobalConstants.lives - 1
+			get_tree().change_scene("res://Scenes/lives.tscn")
+
 	if(state == DEAD):
 		return
 	velocity.y += gravity * delta
