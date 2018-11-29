@@ -115,7 +115,8 @@ func animation_completed(anim):
 		set_process(true)
 		change_state(IDLE)
 	elif anim == 'dead':
-		print("finish")
+		GlobalConstants.lives = GlobalConstants.lives - 1
+		get_tree().change_scene("res://Scenes/lives.tscn")
 		set_physics_process(false)
 		set_process(false)
 
