@@ -157,6 +157,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 
 func get_hurt(hurt):
+	$AudioStreamPlayer.stream = load("res://Assets/sounds/Hit2.wav" if GlobalConstants.CURR_LEVEL == 2 else "res://Assets/sounds/Hit.wav")
+	$AudioStreamPlayer.play()
 	health -= hurt
 	health_bar.set_value(health)
 	if(health <= 0):

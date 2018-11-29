@@ -43,11 +43,11 @@
 [ext_resource path="res://Assets/characters/dino/walk/walk-9.png" type="Texture" id=41]
 [ext_resource path="res://Assets/characters/dino/walk/walk-10.png" type="Texture" id=42]
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 0.5, 1, 0.1 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
@@ -66,7 +66,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=3]
 
 length = 2.1
 loop = false
@@ -96,7 +96,7 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 
 resource_name = "dead"
 length = 0.7
@@ -127,7 +127,7 @@ tracks/1/keys = {
 "values": [ "dead", "dead" ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 
 resource_name = "walk"
 length = 1.0
@@ -180,7 +180,7 @@ back_pos_path = null
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
@@ -207,7 +207,7 @@ transparent = true
 shaded = false
 double_sided = true
 alpha_cut = 0
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "attack"
 frame = 10
 _sections_unfolded = [ "Animation", "Transform" ]
@@ -219,9 +219,9 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/attack = SubResource( 7 )
-anims/dead = SubResource( 8 )
-anims/walk = SubResource( 9 )
+anims/attack = SubResource( 3 )
+anims/dead = SubResource( 4 )
+anims/walk = SubResource( 5 )
 blend_times = [  ]
 
 
