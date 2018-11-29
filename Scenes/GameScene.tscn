@@ -1,17 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/GameScene.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
-[ext_resource path="res://Assets/sky/sky.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Levels/Level1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=6]
 
 [sub_resource type="BoxShape" id=1]
 
 extents = Vector3( 0.7, 1, 0.1 )
 
-[node name="GameScene" type="Spatial"]
+[node name="GameScene" type="Spatial" index="0"]
 
 script = ExtResource( 1 )
 
@@ -121,11 +118,5 @@ far = 100.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="CurrentLevel" type="Spatial" parent="." index="4"]
-
-[node name="Level1" parent="CurrentLevel" index="0" instance=ExtResource( 4 )]
-
-[node name="Spatial" parent="." index="5" instance=ExtResource( 6 )]
-
-_sections_unfolded = [ "Transform" ]
 
 
