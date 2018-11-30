@@ -64,7 +64,7 @@ func change_state(new_state):
 			new_anim = 'dead'
 
 func get_input():
-	if(state == FINISH):
+	if(state == FINISH or GlobalConstants.paused):
 		return
 	velocity.x = 0
 	var right = Input.is_action_pressed('move_right')
@@ -157,7 +157,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3(0, 1, 0))
 
 func get_hurt(hurt):
-	$AudioStreamPlayer.stream = load("res://Assets/sounds/Hit2.wav" if GlobalConstants.CURR_LEVEL == 2 else "res://Assets/sounds/Hit.wav")
+	$AudioStreamPlayer.stream = load("res://Assets/sounds/Hit2.wav" if GlobalConstants.CURR_LEVEL == 2 else "res://Assets/sounds/Hit1.wav")
 	$AudioStreamPlayer.play()
 	health -= hurt
 	health_bar.set_value(health)
