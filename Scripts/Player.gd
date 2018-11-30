@@ -64,7 +64,7 @@ func change_state(new_state):
 			new_anim = 'dead'
 
 func get_input():
-	if(state == FINISH):
+	if(state == FINISH or GlobalConstants.paused):
 		return
 	velocity.x = 0
 	var right = Input.is_action_pressed('move_right')
