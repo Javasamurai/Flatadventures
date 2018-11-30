@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/fonts/riffic-bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/pngs/Kunai.png" type="Texture" id=2]
 [ext_resource path="res://Assets/characters/ninjaboy/idle/Idle__009-18.png" type="Texture" id=3]
 [ext_resource path="res://Assets/fonts/Friendly Schoolmates (Regular) Font by Situjuh (7NTypes).otf" type="DynamicFontData" id=4]
 [ext_resource path="res://Assets/pngs/game_off_logo.png" type="Texture" id=5]
+[ext_resource path="res://Assets/sounds/level4.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -96,5 +97,14 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 5 )
 region_rect = Rect2( 500, 500, 500, 500 )
 _sections_unfolded = [ "Animation", "Material", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 
