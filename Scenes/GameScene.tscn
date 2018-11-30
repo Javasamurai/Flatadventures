@@ -143,7 +143,6 @@ directional_shadow_max_distance = 200.0
 
 [node name="player_body" type="KinematicBody" parent="." index="3"]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.555, 26.1705, 2 )
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -162,14 +161,23 @@ run_speed = 15
 jump_speed = 15
 gravity = -20
 
-[node name="CollisionShape" type="CollisionShape" parent="player_body" index="0"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="player_body" index="0"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="CollisionShape" type="CollisionShape" parent="player_body" index="1"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.265528, 0 )
 shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="bg" type="Sprite3D" parent="player_body" index="1"]
+[node name="bg" type="Sprite3D" parent="player_body" index="2"]
 
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, -10.1876 )
 layers = 1
