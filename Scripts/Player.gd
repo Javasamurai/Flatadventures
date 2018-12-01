@@ -163,7 +163,6 @@ func get_hurt(hurt):
 	health_bar.set_value(health)
 	if(health <= 0):
 		change_state(DEAD)
-		$CollisionShape.disabled = true
 
 func attack_enemy():
 	if is_on_floor():
@@ -176,6 +175,9 @@ func attack_enemy():
 func stop_movement():
 	change_state(FINISH)
 	set_physics_process(false)
-	if(GlobalConstants.CURR_LEVEL != 3):
+	print(GlobalConstants.CURR_LEVEL)
+	if(GlobalConstants.CURR_LEVEL == 3):
+		get_tree().change_scene("res://Scenes/credits.tscn")
+	else:
 		GlobalConstants.CURR_LEVEL += 1
 		get_tree().reload_current_scene()

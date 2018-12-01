@@ -1,33 +1,49 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/models/tileset_green.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://Assets/pngs/Object/Tree.png" type="Texture" id=2]
-[ext_resource path="res://Assets/pngs/Object/ArrowSign.png" type="Texture" id=3]
-[ext_resource path="res://Assets/pngs/Object/Bush_grave.png" type="Texture" id=4]
-[ext_resource path="res://Assets/pngs/Object/TombStone (2).png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Zombie.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Finish.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/pngs/Object/Tree_3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/pngs/Object/Mushroom_1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/pngs/Object/Bush (4).png" type="Texture" id=5]
+[ext_resource path="res://Assets/pngs/Object/Bush (2).png" type="Texture" id=6]
+[ext_resource path="res://Assets/pngs/Object/Sign_2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/pngs/Object/Mushroom_2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/pngs/Object/ArrowSign.png" type="Texture" id=9]
+[ext_resource path="res://Assets/pngs/Object/Bush_grave.png" type="Texture" id=10]
+[ext_resource path="res://Assets/pngs/Object/TombStone (2).png" type="Texture" id=11]
+[ext_resource path="res://Assets/pngs/Object/TombStone (1).png" type="Texture" id=12]
+[ext_resource path="res://Assets/pngs/Object/Skeleton.png" type="Texture" id=13]
+[ext_resource path="res://Assets/pngs/Object/DeadBush.png" type="Texture" id=14]
+[ext_resource path="res://Assets/pngs/Object/Bush_grave_small.png" type="Texture" id=15]
+[ext_resource path="res://Assets/pngs/Object/Fence (1).png" type="Texture" id=16]
+[ext_resource path="res://Assets/pngs/Object/Fence (2).png" type="Texture" id=17]
+[ext_resource path="res://Assets/pngs/Object/Fence (3).png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Zombie.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Spikes.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Saw.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Robo.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Dino.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Finish.tscn" type="PackedScene" id=24]
 
 [node name="Level3" type="Spatial" index="0"]
 
-[node name="Level1" type="GridMap" parent="." index="0"]
+[node name="Level3" type="GridMap" parent="." index="0"]
 
 theme = ExtResource( 1 )
-cell_size = Vector3( 10, 10, 10 )
+cell_size = Vector3( 2, 2, 2 )
 cell_octant_size = 8
 cell_center_x = true
-cell_center_y = false
+cell_center_y = true
 cell_center_z = true
 cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 0, 0, 1, 1, 0, -536870911, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 6, 0, -536870911, 8, 0, 1048578, 9, 0, 1048578, 10, 0, 1048578, 11, 0, 1048577, 12, 0, 1048577, 13, 0, 1048577, 14, 0, 1048579, 15, 0, 1048579, 16, 0, 1441794, 17, 0, 1441793, 18, 0, 1441809, 19, 0, 1, 20, 0, 1, 21, 0, 1, 22, 0, 1, 24, 0, 1048593, 25, 0, 1048577, 26, 0, 1048577, 27, 0, 1048593, 28, 0, 1048577, 29, 0, 1048578, 30, 0, 1048578, 31, 0, 1048578, 32, 0, 537919490, 33, 0, 1048578, 34, 0, 537919490, 35, 0, 1048578, 36, 0, 1048577, 37, 0, 1048577, 38, 0, 1441809, 65535, 0, 1, 0, 1, 1, 1, 1, 1, 2, 1, 1, 3, 1, 536870913, 4, 1, 1, 5, 1, 1, 6, 1, 1, 8, 1, 1048578, 9, 1, 1048578, 10, 1, 1048578, 11, 1, 1048577, 12, 1, 1048577, 13, 1, 1048577, 14, 1, 1048579, 15, 1, 1048579, 16, 1, 1048579, 17, 1, 1048579, 18, 1, 1048578, 19, 1, -2147483647, 20, 1, 1073741825, 21, 1, -1610612735, 22, 1, 1, 24, 1, -1072693231, 25, 1, -1609564159, 26, 1, 1048577, 27, 1, -1609564143, 28, 1, -1609564159, 29, 1, -1609564158, 30, 1, -2146435070, 31, 1, -535822334, 32, 1, 1048578, 33, 1, 537919490, 34, 1, 537919490, 35, 1, 1048578, 36, 1, 1048577, 37, 1, 1048577, 38, 1, 1048577, 65535, 1, -536870911, 15, 65535, 1441795, 16, 65535, 1075183618, 17, 65535, 1441793, 18, 65535, 1441809, 37, 65535, -535429119, 38, 65535, 1441809 )
+"cells": PoolIntArray( 227, 0, 1441797, 237, 0, 655365, 250, 0, 1441797, 260, 0, 655365, 1, 3, 1, 6, 3, 1, 11, 3, 1, 16, 3, 1, 21, 3, 1, 26, 3, 1, 31, 3, 1, 36, 3, 2, 41, 3, 2, 46, 3, 2, 51, 3, 2, 56, 3, 2, 61, 3, 2, 66, 3, 3, 71, 3, 3, 88, 3, 2, 93, 3, 2, 117, 3, 1048577, 122, 3, 1048577, 127, 3, 1048577, 132, 3, 1048577, 137, 3, 1048577, 142, 3, 1048577, 147, 3, 1048578, 157, 3, 1048578, 162, 3, 1048578, 167, 3, 1048578, 172, 3, -535822333, 177, 3, 537919491, 181, 3, 537526274, 182, 3, 1048577, 187, 3, 1048577, 192, 3, 537919489, 197, 3, 1441809, 152, 4, 1048577, 220, 4, 537919490, 225, 4, 1048578, 238, 5, 1, 243, 5, 1, 267, 5, 1048577, 272, 5, 1048577, 1, 8, 1, 6, 8, 1, 11, 8, 1, 16, 8, 1, 21, 8, 1, 26, 8, 1, 31, 8, 1, 36, 8, 2, 41, 8, 2, 46, 8, 2, 51, 8, 2, 56, 8, 2, 61, 8, 2, 66, 8, 3, 71, 8, 3, 76, 8, 11, 86, 8, 1048587, 88, 8, 2, 93, 8, 2, 100, 8, 5, 110, 8, 1048581, 117, 8, 1048577, 122, 8, 1048577, 127, 8, 1048577, 132, 8, 1048577, 137, 8, 1048577, 142, 8, 1048577, 147, 8, 537919490, 152, 8, 537919489, 157, 8, 537919490, 162, 8, 537919490, 167, 8, 537919490, 172, 8, 537919491, 177, 8, 537919491, 182, 8, 537919489, 187, 8, 537919489, 192, 8, 537919489, 197, 8, 537919489, 202, 9, 536870917, 212, 9, 537919493, 220, 9, 537919490, 225, 9, 537919490, 227, 10, 536870917, 237, 10, 537919493, 238, 10, 536870913, 243, 10, 536870913, 250, 10, 536870917, 260, 10, 537919493, 267, 10, 537919489, 272, 10, 537919489, 207, 65530, 537526274, 212, 65530, 537526274, 220, 65530, 537526274, 225, 65530, 537526274, 232, 65531, 537526273, 237, 65531, 537526273, 243, 65531, 537526273, 248, 65531, 537526273, 255, 65531, 537526273, 260, 65531, 537526273, 267, 65531, 537526273, 272, 65531, 537526273, 76, 65534, 538312715, 86, 65534, 537526283, 100, 65534, 538312709, 110, 65534, 537526277, 181, 65534, 537526274, 192, 65534, 538312705, 197, 65534, 538312721, 202, 65535, 538312709, 212, 65535, 537526277 )
 }
-_sections_unfolded = [ "Cell", "Transform" ]
 __meta__ = {
 "_editor_clip_": 0,
-"_editor_floor_": Vector3( 0, 0, 0 )
+"_editor_floor_": Vector3( 0, -5, 0 )
 }
 
 [node name="2dElements" type="Spatial" parent="." index="1"]
@@ -68,9 +84,41 @@ region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="sign" type="Sprite3D" parent="2dElements" index="1"]
+[node name="tree2" type="Sprite3D" parent="2dElements" index="1"]
 
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 64.4721, 20.7932, 0.990739 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 414.341, 24.1894, 2.26013 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 2 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tree3" type="Sprite3D" parent="2dElements" index="2"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 440.431, 23.6484, 1.19639 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -100,9 +148,9 @@ region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="rock" type="Sprite3D" parent="2dElements" index="2"]
+[node name="mush" type="Sprite3D" parent="2dElements" index="3"]
 
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 115.589, 19.5932, 0.990739 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 485.706, 21.1063, 0.0214131 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -132,41 +180,9 @@ region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="rock2" type="Sprite3D" parent="2dElements" index="3"]
+[node name="green_bush" type="Sprite3D" parent="2dElements" index="4"]
 
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 118.664, 19.5932, 0.990739 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-centered = true
-offset = Vector2( 0, 0 )
-flip_h = false
-flip_v = false
-modulate = Color( 1, 1, 1, 1 )
-opacity = 1.0
-pixel_size = 0.01
-axis = 2
-transparent = true
-shaded = false
-double_sided = true
-alpha_cut = 0
-texture = ExtResource( 4 )
-vframes = 1
-hframes = 1
-frame = 0
-region_enabled = false
-region_rect = Rect2( 0, 0, 0, 0 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="rock3" type="Sprite3D" parent="2dElements" index="4"]
-
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 123.658, 23.026, 0.0544415 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 462.497, 20.7222, 0.152478 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -196,16 +212,982 @@ region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="NPC" type="Spatial" parent="." index="2"]
+[node name="green_bush2" type="Sprite3D" parent="2dElements" index="5"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 465.195, 20.7222, 0.152478 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 5 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="green_bush3" type="Sprite3D" parent="2dElements" index="6"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 468.172, 20.7222, 0.152478 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 6 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="sign2" type="Sprite3D" parent="2dElements" index="7"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 510.544, 20.8449, 1.01038 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 7 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="mush2" type="Sprite3D" parent="2dElements" index="8"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 494.12, 21.1063, 0.0214131 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 8 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="sign" type="Sprite3D" parent="2dElements" index="9"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 64.4721, 20.7932, 0.990739 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 9 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="rock" type="Sprite3D" parent="2dElements" index="10"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 115.589, 19.5932, 0.990739 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 10 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="rock2" type="Sprite3D" parent="2dElements" index="11"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 118.664, 19.5932, 0.990739 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 10 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tombstone" type="Sprite3D" parent="2dElements" index="12"]
+
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 123.658, 20.9497, 0.0544415 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 11 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="tombstone2" type="Sprite3D" parent="2dElements" index="13"]
+
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 249.56, 22.0148, -0.00823402 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 12 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="skeleton" type="Sprite3D" parent="2dElements" index="14"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 256.486, 20.9926, -0.00823402 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 13 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="dead_tree" type="Sprite3D" parent="2dElements" index="15"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 299.343, 21.5876, 2.95569 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 14 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush" type="Sprite3D" parent="2dElements" index="16"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 315, 19.1229, -0.00823402 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 10 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="bush2" type="Sprite3D" parent="2dElements" index="17"]
+
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 321.04, 19.1229, 0.702301 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 15 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences2" type="Spatial" parent="2dElements" index="18"]
 
 editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 364.674, 8.55484, -17.609 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_left" type="Sprite3D" parent="2dElements/fences2" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.74445, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 16 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle" type="Sprite3D" parent="2dElements/fences2" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36749, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle8" type="Sprite3D" parent="2dElements/fences2" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.27686, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle9" type="Sprite3D" parent="2dElements/fences2" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85263, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle10" type="Sprite3D" parent="2dElements/fences2" index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41595, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle11" type="Sprite3D" parent="2dElements/fences2" index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15216, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle2" type="Sprite3D" parent="2dElements/fences2" index="6"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63055, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle3" type="Sprite3D" parent="2dElements/fences2" index="7"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97302, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle4" type="Sprite3D" parent="2dElements/fences2" index="8"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3708, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle5" type="Sprite3D" parent="2dElements/fences2" index="9"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9902, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle6" type="Sprite3D" parent="2dElements/fences2" index="10"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5464, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle7" type="Sprite3D" parent="2dElements/fences2" index="11"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.911, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle12" type="Sprite3D" parent="2dElements/fences2" index="12"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8012, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle13" type="Sprite3D" parent="2dElements/fences2" index="13"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3825, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle14" type="Sprite3D" parent="2dElements/fences2" index="14"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.971, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_middle15" type="Sprite3D" parent="2dElements/fences2" index="15"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4399, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 17 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="fences_right" type="Sprite3D" parent="2dElements/fences2" index="16"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.241, 12.4211, 18.2767 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+centered = true
+offset = Vector2( 0, 0 )
+flip_h = false
+flip_v = false
+modulate = Color( 1, 1, 1, 1 )
+opacity = 1.0
+pixel_size = 0.01
+axis = 2
+transparent = true
+shaded = false
+double_sided = true
+alpha_cut = 0
+texture = ExtResource( 18 )
+vframes = 1
+hframes = 1
+frame = 0
+region_enabled = false
+region_rect = Rect2( 0, 0, 0, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPC" type="Spatial" parent="." index="2"]
+
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.21932, 2 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Zombie" parent="NPC" index="0" instance=ExtResource( 6 )]
+[node name="Zombie" parent="NPC" index="0" instance=ExtResource( 19 )]
 
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 89.6032, 19.9846, 0 )
+_sections_unfolded = [ "Transform" ]
 run_speed = 5
 attack_hurt = 25
 gravity = -20
@@ -220,8 +1202,136 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9018, 0, 0 )
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.72768, 0, 0 )
 
-[node name="Finish" parent="." index="3" instance=ExtResource( 7 )]
+[node name="Zombie2" parent="NPC" index="1" instance=ExtResource( 19 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 374.384, 12.4948, 8.75089 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 239.792, 23.3481, 0 )
+run_speed = 5
+attack_hurt = 25
+gravity = -20
+front_pos_path = NodePath("Position3D")
+back_pos_path = NodePath("Position3D2")
+
+[node name="Position3D" type="Position3D" parent="NPC/Zombie2" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72046, 0, 0 )
+
+[node name="Position3D2" type="Position3D" parent="NPC/Zombie2" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2191, 0, 0 )
+
+[node name="Zombie3" parent="NPC" index="2" instance=ExtResource( 19 )]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 265.412, 23.3481, 0 )
+_sections_unfolded = [ "Transform" ]
+run_speed = 5
+attack_hurt = 25
+gravity = -20
+front_pos_path = NodePath("Position3D")
+back_pos_path = NodePath("Position3D2")
+
+[node name="Position3D" type="Position3D" parent="NPC/Zombie3" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72046, 0, 0 )
+
+[node name="Position3D2" type="Position3D" parent="NPC/Zombie3" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2191, 0, 0 )
+
+[node name="Spikes" parent="NPC" index="3" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9307, 20.2421, 0 )
+
+[node name="Spikes2" parent="NPC" index="4" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143.126, 13.1071, 0 )
+
+[node name="Spikes3" parent="NPC" index="5" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 187.727, 17.8702, 0 )
+
+[node name="Spikes4" parent="NPC" index="6" instance=ExtResource( 20 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 289.55, 17.8702, 0 )
+
+[node name="Saw" parent="NPC" index="7" instance=ExtResource( 21 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 318.826, 17.1009, 0 )
+_sections_unfolded = [ "Transform" ]
+dist = 10
+
+[node name="Robo" parent="NPC" index="8" instance=ExtResource( 22 )]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 345.494, 16.828, 0 )
+run_speed = 10
+attack_hurt = 20
+gravity = -20
+front_pos_path = NodePath("Position3D")
+back_pos_path = NodePath("Position3D2")
+
+[node name="Position3D" type="Position3D" parent="NPC/Robo" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86029, -0.416635, 0 )
+
+[node name="Position3D2" type="Position3D" parent="NPC/Robo" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4234, -0.416635, 0 )
+
+[node name="Robo2" parent="NPC" index="9" instance=ExtResource( 22 )]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 371.978, 20.8093, 0 )
+run_speed = 10
+attack_hurt = 20
+gravity = -20
+front_pos_path = NodePath("Position3D")
+back_pos_path = NodePath("Position3D2")
+
+[node name="Position3D" type="Position3D" parent="NPC/Robo2" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6254, -0.416635, 0 )
+
+[node name="Position3D2" type="Position3D" parent="NPC/Robo2" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.67319, -0.416635, 0 )
+
+[node name="Dino" parent="NPC" index="10" instance=ExtResource( 23 )]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 444.58, 19.3043, 0 )
+_sections_unfolded = [ "Transform" ]
+attack_hurt = 10
+front_pos_path = NodePath("Position3D")
+back_pos_path = NodePath("Position3D2")
+
+[node name="Position3D" type="Position3D" parent="NPC/Dino" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.28677, 0, 0 )
+
+[node name="Position3D2" type="Position3D" parent="NPC/Dino" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0022, 0, 0 )
+
+[node name="Dino2" parent="NPC" index="11" instance=ExtResource( 23 )]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 487.938, 21.3258, 0 )
+attack_hurt = 10
+front_pos_path = NodePath("Position3D")
+back_pos_path = NodePath("Position3D2")
+
+[node name="Position3D" type="Position3D" parent="NPC/Dino2" index="2"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.28677, 0, 0 )
+
+[node name="Position3D2" type="Position3D" parent="NPC/Dino2" index="3"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0022, 0, 0 )
+
+[node name="Finish" parent="." index="3" instance=ExtResource( 24 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 536.219, 14.3227, 2 )
 
 

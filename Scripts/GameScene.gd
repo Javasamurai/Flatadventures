@@ -22,10 +22,14 @@ func _ready():
 func set_up_audio():
 	audio_player = AudioStreamPlayer.new()
 	self.add_child(audio_player)
+	audio_player.connect("finished", self, "loopAudio")
 	audio_player.stream = load("res://Assets/sounds/level" + str(GlobalConstants.CURR_LEVEL) + ".wav")
-	audio_player.autoplay = true
 	audio_player.play()
-	
+
+func loopAudio():
+	audio_player.seek(0)
+	audio_player.play()
+
 func _process(delta):
 	$Camera.translation.x = $player_body.translation.x
 	$Camera.translation.y = $player_body.translation.y + 2

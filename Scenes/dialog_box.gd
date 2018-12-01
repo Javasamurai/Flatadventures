@@ -12,7 +12,6 @@ func _ready():
 	
 func _process(delta):
 	if Input.is_action_just_released('next'):
-		print(dialogue_pos)
 		if dialogue_pos >= dialogues[GlobalConstants.CURR_LEVEL - 1].size() - 1:
 			GlobalConstants.paused = false
 			$ColorRect.visible = false
